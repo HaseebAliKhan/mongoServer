@@ -57,13 +57,13 @@ app.post("/users", (req,res)=>{
 
 app.put("/users/:id",(req,res)=>{
     let newObj = {}
-        if(req.body.name){
+        if(req.body.name= "" || req.body.name ){
             newObj.name = req.body.name
         }
-        if(req.body.email){
+        if(req.body.email= "" || req.body.email){
             newObj.email = req.body.email
         }
-        if(req.body.pass){
+        if(req.body.pass= "" || req.body.pass){
             newObj.pass = req.body.pass
         }
         Users.findByIdAndUpdate(req.params.id, newObj, {new:true}, (err,users)=>{
