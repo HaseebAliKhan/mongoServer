@@ -74,7 +74,7 @@ app.put("/users/:id",(req,res)=>{
                 }
               })
           })
-          app.delete('/user/:id', (req, res) => {
+          app.delete('/users/:id', (req, res) => {
           
             Users.findByIdAndRemove(req.params.id, (err, data) => {
               if (!err) {
